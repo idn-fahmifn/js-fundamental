@@ -57,6 +57,7 @@
 
 // block scope
 
+
 // function hello() {
 //     if(true){
 //         let salam = 'assalamualaikum guisss'
@@ -253,11 +254,11 @@ let des = 10.2
 // console.log(kata.length)
 
 // looping
-let word = "hello"
-for (let i = 0; i < word.length; i++){
-    console.log(word[i])
-}
-console.log('jumlahnya '+ word.length)
+// let word = "hello"
+// for (let i = 0; i < word.length; i++){
+//     console.log(word[i])
+// }
+// console.log('jumlahnya '+ word.length)
 
 // Boolean
 
@@ -320,6 +321,71 @@ console.log('jumlahnya '+ word.length)
 // let [a,b,c] = ['ayam', 'bebek', 'angsa']
 
 // console.log(`${a}, ${b}, ${c}`)
+
+/**
+ * Function
+ * blok kode yang digunakan untuk membungkus suatu proses agar tidak ditulis kembali secara berulang.
+ * 
+ * penulisan function, ada yang memiliki parameter dan ada yang tidak memiliki parameter
+ */
+
+
+// function example(parameter) {
+//     console.log(parameter)
+// }
+// example('ini function dengan parameter')
+
+
+// arrow function
+
+// const example = (parameter) =>{
+//     console.log(parameter)
+// }
+// example('ini function dengan parameter menggunakan arrow function')
+
+// let hitung = (angka1, angka2) => 
+// `${angka1} dikali ${angka2} = ${angka1 * angka2}`
+// console.log(hitung(17, 9))
+
+/**
+ * High Order Function
+ * function yang menerima argumen berupa function lain
+ * 
+ * callback function
+ * function yang akan menjadi argumen dalam pemanggilan high order function
+ */
+
+
+// function genap(number) {
+//     return number % 2 == 0
+// }
+// function printGenap(number) {
+//     let isTrue = genap(number)
+//     if(isTrue){
+//         console.log(`${number} adalah bilangan Genap`)
+//     }else {
+//         console.log(`${number} adalah bilangan Ganjil`)
+//     }
+// }
+// printGenap(1)
+
+function color(car) {
+    return car == 'merah'
+}
+
+function warna(car, callback) {
+    let isTrue = callback(car)
+    if(isTrue){
+        console.log(`Mobil ${car} itu punya saya` )
+    }else{
+        console.log(`Mobil ${car} itu bukan punya saya`)
+    }
+}
+warna('merah', color)
+
+
+
+
 
 
 
